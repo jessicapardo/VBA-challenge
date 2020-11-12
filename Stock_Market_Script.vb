@@ -78,6 +78,16 @@ For Each ws In Worksheets
         ws.Cells(rowcount, 11).Value = percent_change
         ws.Cells(rowcount, 11).NumberFormat = "0.00%"
         End If
+        
+        'Highlight positive change in green and negative change in red
+        If year_change >= 0 Then
+        ws.Cells(rowcount, 10).Interior.ColorIndex = 4
+        
+        Else
+        
+        ws.Cells(rowcount, 10).Interior.ColorIndex = 3
+        
+        End If
  
        'Move it to the next empty row
        rowcount = rowcount + 1
@@ -91,6 +101,7 @@ For Each ws In Worksheets
 
         End If
         
+                
     Next i
 
 'Display Woersheet Name
