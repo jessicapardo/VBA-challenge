@@ -25,8 +25,8 @@ For Each ws In Worksheets
     'Autofit table columns
     ws.Columns("I:L").EntireColumn.AutoFit
     
-    'Initial Values
-    '------------------------------------
+'Initial Values
+'---------------------------------------
     
     'Set variable for total rows
     Dim lastrow As Long
@@ -40,7 +40,6 @@ For Each ws In Worksheets
         'Conditional to determine year open price
         If ws.Cells(i, 1).Value <> ws.Cells(i + 1, 1).Value Then
             year_open = ws.Cells(i, 3).Value
-        
         End If
         
         'Total stock volume for the year
@@ -103,11 +102,62 @@ For Each ws In Worksheets
         
                 
     Next i
+'------------------------------------------------------------------------------
+'BONUS:"Greatest % increase", "Greatest % decrease" and "Greatest total volume"
+'------------------------------------------------------------------------------
+'Set variables
+'---------------------------------------
+    Dim max_value As Double
+    Dim min_value As Double
+    Dim max_vol As Double
+    Dim lastrow_b As Double
 
-'Display Woersheet Name
-MsgBox ws.Name
+
+'Placing the headers
+'---------------------------------------
+    ws.Cells(2, 15).Value = "Greatest % Increase"
+    ws.Cells(3, 15).Value = "Greatest % Decrease"
+    ws.Cells(4, 15).Value = "Greatest Total Volume"
+    ws.Cells(1, 16).Value = "Ticker"
+    ws.Cells(1, 17).Value = "Value"
+   
+      
+    lastrow_b = ws.Cells(Rows.Count, 9).End(xlUp).Row
+ 
+    'Determining greatest % increase
+    max_value = WorksheetFunction.Max(ws.Range("K:K"))
+    ws.Cells(2, 17).Value = max_value
+    
+     For j = 2 To lastrow_b
+        If ws.Cells(j, 11).Value = max_value Then
+        ws.Cells(2, 16) = ws.Cells(j, 9).Value
+        End If
+     Next j
+    
+    'Determining greatest % decrease
+    min_value = WorksheetFunction.Min(ws.Range("K:K"))
+    ws.Cells(3, 17).Value = min_value
+    
+     For k = 2 To lastrow_b
+        If ws.Cells(k, 11).Value = min_value Then
+        ws.Cells(3, 16) = ws.Cells(k, 9).Value
+        End If
+     Next k
+    
+    'Determining greatest Total Volume
+    max_vol = WorksheetFunction.Max(ws.Range("L:L"))
+    ws.Cells(4, 17).Value = max_vol
+        
+     For l = 2 To lastrow_b
+        If ws.Cells(l, 12).Value = max_vol Then
+        ws.Cells(4, 16) = ws.Cells(l, 9).Value
+        End If
+     Next l
+  
+'Formating
+    ws.Columns("O:Q").EntireColumn.AutoFit
+
     
 Next ws
-
 
 End Sub
