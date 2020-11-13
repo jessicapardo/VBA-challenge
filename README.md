@@ -10,13 +10,13 @@ In this assignment you will use VBA scripting to analyze real stock market data.
 
  Create a script that will loop through all the stocks for one year and output the following information.
 
-    * The ticker symbol.
+   * The ticker symbol.
 
-    * Yearly change from opening price at the beginning of a given year to the closing price at the end of that year.
+   * Yearly change from opening price at the beginning of a given year to the closing price at the end of that year.
 
-    * The percent change from opening price at the beginning of a given year to the closing price at the end of that year.
+   * The percent change from opening price at the beginning of a given year to the closing price at the end of that year.
 
-    * The total stock volume of the stock.
+   * The total stock volume of the stock.
 
  Conditional formatting that will highlight positive change in green and negative change in red.
 
@@ -26,23 +26,23 @@ In this assignment you will use VBA scripting to analyze real stock market data.
 
   ## Files
 
-    * The Multiple_year_stock_data: raw data used for this analysis [Stock Data](Data\Multiple_year_stock_data.xlsx)
-    * The Multiple_year_stock_data_Solved: Results by years of the Stock Market Analysis [Stock Data Solved](Data\Multiple_year_stock_data_Solved.xlsm) 
+   * The Multiple_year_stock_data: raw data used for this analysis. 
+   * The Multiple_year_stock_data_Solved: Results by years of the Stock Market Analysis.  
 
 
   ## Results
 
   2014 Stock Market Analysis
 
-    ![2014](https://github.com/jessicapardo/VBA-challenge/blob/main/Images/2014_Stock_Analysis.png)
+  ![2014](https://github.com/jessicapardo/VBA-challenge/blob/main/Images/2014_Stock_Analysis.png)
 
   2015 Stock Market Analysis
 
-    ![Image](Images\2015_Stock_Analysis.png)
+  ![2015](https://github.com/jessicapardo/VBA-challenge/blob/main/Images/2015_Stock_Analysis.png)
 
   2016 Stock Market Analysis
 
-    ![Image](Images\2016_Stock_Analysis.png)
+  ![2016](https://github.com/jessicapardo/VBA-challenge/blob/main/Images/2016_Stock_Analysis.png)
 
 
 ### Copyright
