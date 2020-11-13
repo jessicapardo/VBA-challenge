@@ -38,7 +38,7 @@ For Each ws In Worksheets
     For i = 2 To lastrow
         
         'Conditional to determine year open price
-        If ws.Cells(i, 1).Value <> ws.Cells(i + 1, 1).Value Then
+        If ws.Cells(i, 1).Value <> ws.Cells(i - 1, 1).Value Then
             year_open = ws.Cells(i, 3).Value
         End If
         
@@ -156,7 +156,8 @@ For Each ws In Worksheets
   
 'Formating
     ws.Columns("O:Q").EntireColumn.AutoFit
-
+    ws.Cells(2, 17).NumberFormat = "0.00%"
+    ws.Cells(3, 17).NumberFormat = "0.00%"
     
 Next ws
 
