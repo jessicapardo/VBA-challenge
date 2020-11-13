@@ -34,7 +34,7 @@ In this assignment you will use VBA scripting to analyze real stock market data.
 
   2014 Stock Market Analysis
 
-    ![Image](Images\2014_Stock_Analysis.png)
+    ![2014](https://github.com/jessicapardo/VBA-challenge/blob/main/Images/2014_Stock_Analysis.png)
 
   2015 Stock Market Analysis
 
